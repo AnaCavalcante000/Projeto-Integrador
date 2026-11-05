@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b4968">
+<title>Radiação Solar | Absorção, Reflexão e Transmissão</title>
+<style>
+:root{--navy:#073b56;--blue:#087eaa;--sky:#dff5fb;--aqua:#42c6c9;--ink:#183344;--muted:#5e7480;--cream:#fffdf7;--gold:#ffc857}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f4fbfd;line-height:1.65}
+header{background:linear-gradient(135deg,#073b56,#087eaa 65%,#42c6c9);color:white;padding:22px max(6vw,22px) 76px}
+nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font-weight:800;letter-spacing:.5px}.navlinks{display:flex;gap:18px;flex-wrap:wrap}.navlinks a{color:white;text-decoration:none;font-size:.92rem;opacity:.95}.navlinks a:hover{text-decoration:underline}
+.hero{max-width:1100px;margin:70px auto 0}.tag{display:inline-block;background:#ffffff24;border:1px solid #ffffff55;padding:6px 13px;border-radius:30px;font-size:.85rem}.hero h1{font-size:clamp(2.2rem,6vw,4.6rem);line-height:1.05;max-width:850px;margin:18px 0}.hero p{max-width:690px;font-size:1.12rem;color:#e6f8fc}.button{display:inline-block;margin-top:14px;background:var(--gold);color:#17394b;text-decoration:none;font-weight:800;padding:12px 20px;border-radius:12px}
+main{max-width:1100px;margin:-35px auto 0;padding:0 22px 60px}.intro{background:white;border-radius:22px;padding:26px 30px;box-shadow:0 12px 35px #0b49681a}.intro strong{color:var(--blue)}
+section{padding-top:55px}.section-title{font-size:2rem;color:var(--navy);margin:0 0 8px}.lead{color:var(--muted);margin-top:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}.card{background:white;border:1px solid #dceef3;border-radius:18px;padding:22px;box-shadow:0 7px 20px #0b49680b}.icon{font-size:2rem}.card h3{color:var(--navy);margin:8px 0}.card p{margin:0;color:#47616d}.highlight{background:#e7f8fa;border-left:5px solid var(--aqua);padding:17px 20px;border-radius:10px;margin-top:20px}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.step{background:var(--navy);color:white;border-radius:16px;padding:20px}.step b{display:block;color:#9ce9eb;font-size:1.05rem;margin-bottom:6px}
+.simulator{background:white;border:1px solid #dceef3;border-radius:20px;padding:24px;margin-top:22px}.controls{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}.controls button,.quiz button{border:0;border-radius:10px;padding:11px 15px;background:#e4f4f8;color:var(--navy);font-weight:700;cursor:pointer}.controls button.active,.quiz button:hover{background:var(--blue);color:white}.demo{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}.surface{height:130px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:1.2rem;background:#222;transition:background .2s}.result{background:#f0f9fb;border-radius:14px;padding:18px}.result strong{color:var(--blue)}
+.cover-demo{display:flex;align-items:center;gap:14px;margin-top:16px}.cover{width:100%;height:95px;border-radius:12px;background:linear-gradient(#bdebf3aa,#bdebf355),linear-gradient(180deg,#5fc4d8 0 60%,#087eaa 60%);border:3px solid #a9dce5;display:flex;align-items:center;justify-content:center;color:#073b56;font-weight:bold}
+.quiz{background:#073b56;color:white;border-radius:20px;padding:25px;margin-top:22px}.quiz h3{margin-top:0}.quiz p{color:#e4f6fa}.quiz button{margin:4px 5px 4px 0}.feedback{min-height:28px;font-weight:bold;margin-top:10px}
+footer{text-align:center;padding:30px 20px;background:#052f45;color:#d8edf3;font-size:.9rem}
+@media(max-width:760px){.grid,.process{grid-template-columns:1fr}.demo{grid-template-columns:1fr}.hero{margin-top:48px}.navlinks{gap:10px}.navlinks a{font-size:.8rem}.intro{padding:22px}}
+</style>
+</head>
+<body>
+<header>
+<nav><div class="brand">☀️ CIÊNCIA SOLAR</div><div class="navlinks"><a href="#conceitos">Conceitos</a><a href="#materiais">Materiais</a><a href="#piscina">Piscina</a><a href="#quiz">Quiz</a></div></nav>
+<div class="hero">
+<span class="tag">PROJETO DE FÍSICA · ÓPTICA</span>
+<h1>O caminho da luz:<br>absorção, reflexão e transmissão</h1>
+<p>Entenda como a radiação solar interage com os materiais e como esse conhecimento pode ajudar a aquecer a água de uma piscina.</p>
+<a class="button" href="#conceitos">Começar a explorar ↓</a>
+</div>
+</header>
+<main>
+<div class="intro"><strong>Pergunta central:</strong> quando a luz do Sol encontra uma superfície, para onde vai sua energia? Ela pode ser absorvida, refletida ou atravessar o material. O resultado depende das propriedades do material e do tipo de radiação.</div>
+
+<section id="conceitos">
+<h2 class="section-title">1. Três maneiras de a luz interagir</h2>
+<p class="lead">A radiação solar não se comporta da mesma forma diante de todos os materiais.</p>
+<div class="grid">
+<article class="card"><div class="icon">🌡️</div><h3>Absorção</h3><p>O material absorve a energia da radiação. Essa energia aumenta sua energia interna e pode elevar sua temperatura.</p></article>
+<article class="card"><div class="icon">🪞</div><h3>Reflexão</h3><p>A radiação retorna ao ambiente ao encontrar uma superfície. Quanto mais luz é refletida, menos energia luminosa é absorvida por ela.</p></article>
+<article class="card"><div class="icon">🔎</div><h3>Transmissão</h3><p>A radiação atravessa um material, como acontece com parte da luz visível ao passar por um vidro transparente.</p></article>
+</div>
+<div class="highlight"><b>Importante:</b> a energia que chega a um material pode ser dividida entre absorção, reflexão e transmissão. As proporções variam conforme o material e o comprimento de onda da radiação.</div>
+</section>
+
+<section id="materiais">
+<h2 class="section-title">2. Por que superfícies escuras absorvem mais luz visível?</h2>
+<p class="lead">Em geral, superfícies escuras refletem menos luz visível do que superfícies claras. Por isso, costumam absorver uma parcela maior dessa radiação.</p>
+<div class="simulator">
+<h3>Experimente: escolha uma superfície</h3>
+<p>Selecione uma opção e observe a tendência de absorção da luz visível.</p>
+<div class="controls"><button class="active" data-kind="escura">Superfície escura</button><button data-kind="clara">Superfície clara</button><button data-kind="espelhada">Superfície refletora</button></div>
+<div class="demo"><div id="surface" class="surface">Luz do Sol ☀️</div><div class="result" aria-live="polite"><strong id="result-title">Maior absorção</strong><p id="result-text">A superfície escura tende a absorver uma parcela maior da luz visível e transformar parte dessa energia em energia térmica.</p></div></div>
+</div>
+</section>
+
+<section id="piscina">
+<h2 class="section-title">3. Como uma cobertura transparente ajuda a aquecer a piscina?</h2>
+<p class="lead">Uma cobertura adequada pode permitir a entrada da luz solar e, ao mesmo tempo, diminuir a perda de calor da água.</p>
+<div class="process">
+<div class="step"><b>1 · Entrada da luz</b>A radiação solar atravessa a cobertura transparente e alcança a água e as superfícies da piscina.</div>
+<div class="step"><b>2 · Absorção de energia</b>Parte da radiação é absorvida, contribuindo para aumentar a energia térmica da água e dos materiais.</div>
+<div class="step"><b>3 · Menor perda de calor</b>A cobertura reduz principalmente a evaporação e também pode diminuir trocas de calor com o ar.</div>
+</div>
+<div class="cover-demo"><div class="cover">☀️ Cobertura transparente<br>↓ luz solar</div></div>
+<div class="highlight"><b>Conclusão:</b> a cobertura não funciona apenas por “prender o calor”. Um de seus efeitos mais importantes é reduzir a evaporação, que retira bastante energia térmica da água. O resultado depende do tipo de cobertura, do clima e do uso da piscina.</div>
+</section>
+
+<section id="quiz">
+<h2 class="section-title">4. Teste seus conhecimentos</h2>
+<div class="quiz">
+<h3>Quando a luz é refletida por uma superfície, o que acontece?</h3>
+<p>Escolha uma resposta:</p>
+<button data-answer="wrong">A luz é totalmente absorvida.</button>
+<button data-answer="right">A luz retorna ao ambiente.</button>
+<button data-answer="wrong">A luz sempre atravessa o material.</button>
+<div class="feedback" id="feedback" aria-live="polite"></div>
+</div>
+</section>
+</main>
+<footer>Projeto de Física · Absorção, reflexão e transmissão da radiação solar<br>Material educativo para estudo.</footer>
+<script>
+const data={
+ escura:{color:"#252525",title:"Maior absorção",text:"A superfície escura tende a absorver uma parcela maior da luz visível e transformar parte dessa energia em energia térmica."},
+ clara:{color:"#e9e9e9",title:"Maior reflexão",text:"A superfície clara costuma refletir uma parcela maior da luz visível. Por isso, tende a absorver menos energia luminosa que uma superfície escura."},
+ espelhada:{color:"linear-gradient(135deg,#b9d5df,#ffffff 45%,#7e9eaa)",title:"Reflexão intensa",text:"Uma superfície bem refletora devolve grande parte da radiação que recebe, reduzindo a parcela absorvida."}
+};
+document.querySelectorAll("[data-kind]").forEach(btn=>btn.addEventListener("click",()=>{
+ document.querySelectorAll("[data-kind]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");
+ const d=data[btn.dataset.kind];document.getElementById("surface").style.background=d.color;
+ document.getElementById("surface").style.color=btn.dataset.kind==="clara"?"#183344":"white";
+ document.getElementById("result-title").textContent=d.title;document.getElementById("result-text").textContent=d.text;
+}));
+document.querySelectorAll("[data-answer]").forEach(btn=>btn.addEventListener("click",()=>{
+ const f=document.getElementById("feedback");
+ f.textContent=btn.dataset.answer==="right"?"Correto! Reflexão é o retorno da radiação ao ambiente. ☀️":"Tente novamente. Pense no significado de refletir: a luz volta.";
+ f.style.color=btn.dataset.answer==="right"?"#9ce9c2":"#ffd18a";
+}));
+</script>
+</body>
+</html>
